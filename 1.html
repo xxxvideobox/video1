@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown and Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        iframe {
+            width: 80%;
+            height: 60vh;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://www.effectiveratecpm.com/mmnkug9wm?key=fabc294b846e65a812e12009e93e907d"></iframe>
+    <div id="countdown">
+        
+        Redirecting in 30 seconds...</div>
+
+        අපගේ Bot නියෝජිතයෙකු ඔබව අදාල Video එකට Access දෙනුලබන අතර කරුණාකර තප්පර 30ක් රැඳී සිටින්න..
+        තප්පර 30කින් පසු ඔබට අදාල Video එක පෙන්වනු ලැබේ.
+        <span style="color: red;">Please wait 30 second to our bot will be redirect to your video.
+            Automatically you will redirect to the video. So Be the this page to complete your Request!</span>
+
+    <script>
+        let countdownElement = document.getElementById('countdown');
+        let timeLeft = 30;
+        let countdownInterval;
+
+        function startCountdown() {
+            countdownInterval = setInterval(() => {
+                timeLeft--;
+                countdownElement.innerText = `Redirecting in ${timeLeft} seconds...`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'https://1024terabox.com/s/1jq1SvbRdw7k40JMjn5-FXA';
+                }
+            }, 1000);
+        }
+
+        function stopCountdown() {
+            clearInterval(countdownInterval);
+        }
+
+        startCountdown();
+
+        // Redirect back to the link if user goes back
+        window.onpopstate = function() {
+            window.location.href = 'https://www.effectiveratecpm.com/mmnkug9wm?key=fabc294b846e65a812e12009e93e907d';
+        };
+        
+        // Redirect when clicking anywhere on the page
+        document.body.addEventListener('click', function() {
+            window.location.href = 'https://www.effectiveratecpm.com/mmnkug9wm?key=fabc294b846e65a812e12009e93e907d';
+        });
+
+        // Stop countdown and show popup when user switches tabs
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                stopCountdown();
+                alert("කණගාටුයි ඔබගේ ඉල්ලීම සැකසිය නොහැකි වී ඇත. ඔබ මෙම පිටුව තුල අදාල කාලය යනතුරු රැඳී සිටිය යුතු වේ.. Sorry! Your request is not accepted. You need to stay here until the countdown finishes. Otherwise, our bot is not working properly. Please try again now!");
+                window.location.href = '1.html';
+            }
+        });
+    </script>
+</body>
+</html>

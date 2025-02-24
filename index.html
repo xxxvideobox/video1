@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            width: 400px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff4444;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        #videoPage {
+            display: none;
+            text-align: center;
+        }
+        #countdown {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="ageVerification">
+        <h1>Are you 18+ or not?</h1>
+        <button onclick="redirectTo('https://www.effectiveratecpm.com/mmnkug9wm?key=fabc294b846e65a812e12009e93e907d')">No, I'm Not</button>
+        <button onclick="redirectTo('1.html')">Yes, I'm 18+</button>
+    </div>
+
+    <div class="container" id="videoPage">
+        <h1>Unlock the Video</h1>
+        <button onclick="startCountdown()">Unlock Video</button>
+        <div id="countdown"></div>
+    </div>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+
+        function startCountdown() {
+            window.location.href = '1.html';
+            let countdownElement = document.getElementById('countdown');
+            let timeLeft = 30;
+
+            countdownElement.innerText = `Redirecting in ${timeLeft} seconds...`;
+
+            let countdownInterval = setInterval(() => {
+                timeLeft--;
+                countdownElement.innerText = `Redirecting in ${timeLeft} seconds...`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'https://example.com/sample3';
+                }
+            }, 1000);
+        }
+
+          // Redirect back to the link if user goes back
+          window.onpopstate = function() {
+            window.location.href = 'https://www.effectiveratecpm.com/mmnkug9wm?key=fabc294b846e65a812e12009e93e907d';
+        };
+        
+    </script>
+</body>
+</html>
